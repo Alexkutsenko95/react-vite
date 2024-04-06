@@ -1,0 +1,43 @@
+
+.todo-item:hover {
+    background-color: #eaeaea;
+}
+
+.todo-item span {
+    flex-grow: 1;
+}
+
+.todo-item .btn-remove {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--error-color);
+}
+
+.todo-item {
+    background: #fff;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+.todo-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.todo-item span {
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--error-color);
+}

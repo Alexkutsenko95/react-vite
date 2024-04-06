@@ -1,0 +1,32 @@
+.btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:disabled {
+    border: none;
+}
+
+.btn-create {
+    background-color: #68d391; /* Example color for create */
+}
+
+.btn-remove {
+    background-color: #fc8181; /* Example color for remove */
+}
+
+.btn-complete {
+    background-color: #4c51bf; /* Example color for complete */
+}
+
+.btn:hover {
+    opacity: 0.9;
+}

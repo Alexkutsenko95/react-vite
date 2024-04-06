@@ -1,0 +1,13 @@
+.todo-list {
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.todo-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--error-color);
+}
