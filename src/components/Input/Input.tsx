@@ -2,7 +2,7 @@ import { FC, ChangeEvent, ReactElement } from 'react';
 import { InputType } from '@/components/Input/constants.ts';
 import './Input.styles.css';
 
-interface TodoInputProps {
+interface ITodoInputProps {
   value: string;
   id?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -10,7 +10,7 @@ interface TodoInputProps {
   type: InputType; // Use the enum for type prop
 }
 
-export const Input: FC<TodoInputProps> = ({ ...props }): ReactElement => (
+export const Input: FC<ITodoInputProps> = ({ ...props }): ReactElement => (
   <input
     className="todo-input"
     required
