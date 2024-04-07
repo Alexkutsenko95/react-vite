@@ -7,7 +7,7 @@ interface IInput {
   id?: string;
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   disabled?: boolean;
-  type: InputType; // Use the enum for type prop
+  type: InputType;
 }
 
 export const Input: FC<IInput> = ({ ...props }): ReactElement => (
