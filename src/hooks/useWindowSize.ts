@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface IWindowSize {
   width: number;
@@ -17,13 +17,15 @@ export const useWindowSize = (initialWidth: number = 0, initialHeight: number = 
     height: initialHeight || window.innerHeight,
   });
 
+  const handleResize = useCallback(() => {
+    setSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }, []);
+
+
   useEffect(() => {
-    const handleResize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
 
     window.addEventListener('resize', handleResize);
     // Call handleResize immediately to update the state with the initial window size
