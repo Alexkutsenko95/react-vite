@@ -12,12 +12,11 @@ interface IButtonProps {
 
 export const Button: FC<IButtonProps> =
   ({
-     onClick,
      text,
      variant = ButtonVariant.DEFAULT,
-     disabled,
+     ...props
    }): ReactElement => (
-    <button className={`btn btn-${variant}`} onClick={onClick} disabled={disabled}>
+    <button className={`btn btn-${variant}`} {...props}>
       {text}
     </button>
   );
