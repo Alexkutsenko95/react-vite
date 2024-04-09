@@ -4,13 +4,13 @@ header {
 }
 
 h1 {
-    color: #2c5282; /* Dark blue color for better visibility */
+    color: #2c5282;
     font-size: 2.5rem;
     margin-top: 0.5rem;
 }
 
 .logo {
-    height: 4rem; /* smaller logo for a more refined header */
+    height: 4rem;
     transition: transform 0.2s ease-in-out;
 }
 

@@ -15,11 +15,11 @@
 }
 
 .todo-controls button:nth-child(odd) {
-    background-color: #68d391; /* Soft green */
+    background-color: #68d391;
 }
 
 .todo-controls button:nth-child(even) {
-    background-color: #fc8181; /* Soft red */
+    background-color: #fc8181;
 }
 
 .todo-controls button:hover {
