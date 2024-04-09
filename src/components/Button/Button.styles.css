@@ -16,15 +16,15 @@
 }
 
 .btn-create {
-    background-color: #68d391; /* Example color for create */
+    background-color: #68d391;
 }
 
 .btn-remove {
-    background-color: #fc8181; /* Example color for remove */
+    background-color: #fc8181;
 }
 
 .btn-complete {
-    background-color: #4c51bf; /* Example color for complete */
+    background-color: #4c51bf;
 }
 
 .btn:hover {
