@@ -33,7 +33,7 @@ export const useWindowSize = (initialWidth: number = 0, initialHeight: number = 
 
     // Cleanup function to remove the event listener
     return () => window.removeEventListener('resize', handleResize);
-  }, []); // Empty array ensures the effect is only run on mount and unmount
+  }, [handleResize]); // Empty array ensures the effect is only run on mount and unmount
 
   return size;
 };
