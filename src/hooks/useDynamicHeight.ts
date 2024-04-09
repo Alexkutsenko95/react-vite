@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useWindowSize } from './useWindowSize.ts';
-// import { useWindowSize } from 'react-use';
+import { useWindowSize } from './useWindowSize';
 
 const COUNTER_CARD_HEIGHT = 120;
 const TOP_HEIGHT = 480;
