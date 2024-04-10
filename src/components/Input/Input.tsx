@@ -1,18 +1,7 @@
-import { FC, ChangeEvent, ReactElement } from 'react';
-import { InputType } from './constants.ts';
+import { FC, ReactElement, InputHTMLAttributes } from 'react';
 import './Input.styles.css';
 
-interface IInput {
-  value: string;
-  id?: string;
-  className?: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
-  required?: boolean;
-  type: InputType;
-}
-
-export const Input: FC<IInput> = ({ className, ...props }): ReactElement => (
+export const Input: FC<InputHTMLAttributes<HTMLInputElement>> = ({ className, ...props }): ReactElement => (
   <input
     className={`input ${className}`}
     {...props}
