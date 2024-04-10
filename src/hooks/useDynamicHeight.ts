@@ -1,25 +1,46 @@
 import { useEffect, useState } from 'react';
 import { useWindowSize } from './useWindowSize';
 
-const COUNTER_CARD_HEIGHT = 120;
-const TOP_HEIGHT = 480;
-const LIST_ITEM_HEIGHT = 30;
 
 /**
- * Calculates the dynamic height for a list based on window size and other constants.
+ * Interface representing the props for a component that uses dynamic height.
  *
- * @returns An object containing the calculated list height and a constant item height.
- * @typeParam {number} listHeight - The calculated dynamic height for the list.
- * @typeParam {number} itemHeight - The constant height for each list item.
+ * @interface IUseDynamicHeightProps
  */
-export const useDynamicHeight = (): { listHeight: number, itemHeight: number } => {
+interface IUseDynamicHeightProps {
+  headerHeight: number;
+  footerHeight: number;
+  itemHeight: number;
+}
+
+/**
+ * Defines the interface for dynamic height metrics.
+ */
+interface IDynamicHeightMetrics {
+  listHeight: number;
+  itemHeight: number;
+}
+
+/**
+ * Calculates the dynamic height for a list based on window size and provided header, footer, and item heights.
+ * @param {IUseDynamicHeightProps} props - The props object containing headerHeight, footerHeight, and itemHeight.
+ * @param {number} props.headerHeight - The height of the header in pixels.
+ * @param {number} props.footerHeight - The height of the footer in pixels.
+ * @param {number} props.itemHeight - The height of each list item in pixels.
+ * @returns {IDynamicHeightMetrics} - An object containing the calculated listHeight and itemHeight.
+ */
+export const useDynamicHeight = ({
+                                   headerHeight,
+                                   footerHeight,
+                                   itemHeight,
+                                 }: IUseDynamicHeightProps): IDynamicHeightMetrics => {
   const { height } = useWindowSize();
   const [listHeight, setListHeight] = useState<number>(0);
 
   useEffect(() => {
-    const availableHeight = height - COUNTER_CARD_HEIGHT - TOP_HEIGHT;
+    const availableHeight = height - headerHeight - footerHeight;
     setListHeight(availableHeight > 0 ? availableHeight : 0);
-  }, [height]);
+  }, [height, headerHeight, footerHeight]);
 
-  return { listHeight, itemHeight: LIST_ITEM_HEIGHT };
+  return { listHeight, itemHeight };
 };

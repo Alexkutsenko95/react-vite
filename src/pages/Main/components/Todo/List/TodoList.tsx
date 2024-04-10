@@ -4,7 +4,9 @@ import { TodoItem } from '../Item/TodoItem';
 import { useTodoStore } from '@/store/todos';
 import { useDynamicHeight } from '@/hooks/useDynamicHeight.ts';
 import { useAnimateTodos } from '@/pages/Main/components/Todo/List/useAnimateTodos.ts';
+import { FOOTER_HEIGHT, HEADER_HEIGHT, LIST_ITEM_HEIGHT } from '@/pages/Main/components/Todo/List/constants.ts';
 import './TodoList.styles.css';
+
 
 export const TodoList: FC = (): ReactElement | null => {
   const todos = useTodoStore(({ todos }) => todos);
@@ -12,7 +14,7 @@ export const TodoList: FC = (): ReactElement | null => {
   const {
     listHeight,
     itemHeight,
-  } = useDynamicHeight();
+  } = useDynamicHeight({ headerHeight: HEADER_HEIGHT, footerHeight: FOOTER_HEIGHT, itemHeight: LIST_ITEM_HEIGHT });
 
   if (todos.length === 0) return null;
 
