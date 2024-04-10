@@ -1,12 +1,10 @@
-import { FC, MouseEvent, ReactElement } from 'react';
+import { FC, ButtonHTMLAttributes, ReactElement } from 'react';
 import { ButtonVariant } from '@/components/Button/constants.ts';
 import './Button.styles.css';
 
 
-interface IButtonProps {
-  onClick?: (targetElement: MouseEvent<HTMLButtonElement>) => void;
+interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   text: string;
-  disabled?: boolean;
   variant?: ButtonVariant;
 }
 
