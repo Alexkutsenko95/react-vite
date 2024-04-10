@@ -5,21 +5,12 @@
     flex-wrap: wrap;
 }
 
-.todo-controls button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.2s ease-in-out;
-}
-
 .todo-controls button:nth-child(odd) {
-    background-color: #68d391;
+    background-color: var(--btn-create-bg);
 }
 
 .todo-controls button:nth-child(even) {
-    background-color: #fc8181;
+    background-color: var(--btn-remove-bg);
 }
 
 .todo-controls button:hover {

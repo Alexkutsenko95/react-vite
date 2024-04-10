@@ -1,17 +1,9 @@
-
 .todo-item:hover {
-    background-color: #eaeaea;
+    background-color: var(--code-background);
 }
 
 .todo-item span {
     flex-grow: 1;
-}
-
-.todo-item .btn-remove {
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
-    color: var(--error-color);
 }
 
 .todo-item {

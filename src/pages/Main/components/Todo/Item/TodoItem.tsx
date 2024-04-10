@@ -36,7 +36,7 @@ export const TodoItem: ForwardRefExoticComponent<
       <span style={done ? { textDecoration: 'line-through' } : undefined}>
         {text}
       </span>
-      <Button onClick={handleRemove} text="✖" variant={ButtonVariant.REMOVE} />
+      <Button onClick={handleRemove} text="✖" variant={ButtonVariant.REMOVE_SECONDARY} />
     </li>
   );
 });
